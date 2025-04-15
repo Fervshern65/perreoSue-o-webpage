@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perreando por un sueño - Casting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://album.mediaset.es/eimg/2016/12/28/trb4sciIedFFwW5GHGrwb1.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+           background-color: rgba(255, 255, 255, 0.8); /* Cambia el color del texto para que sea visible sobre la imagen */
+            
+        }
+        h1 {
+            color: #000000;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #e91e63;
+        }
+        .saludo {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Casting para "Perreando por un sueño" ,llena el siguiente formulario
+        y participa en nuestro programa
+    </h1>
+    <form id="castingForm" action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+
+        <label for="lugar">Lugar donde vives:</label>
+        <input type="text" id="lugar" name="lugar" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div class="saludo" id="saludo">¡Gracias por inscribirte! Te esperamos atte Monica Herrera.</div>
+
+    <script>
+        document.getElementById('castingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            document.getElementById('saludo').style.display = 'block'; // Muestra el saludo
+        });
+    </script>
+
+</body>
+</html>
